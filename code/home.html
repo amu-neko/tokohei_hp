@@ -6,13 +6,74 @@
         <!--resetCSS-->
         <link rel="stylesheet" href="https://unpkg.com/modern-css-reset/dist/reset.min.css"/>
         <!--CSS-->
-        <link rel="stylesheet" href="tokohei_style.css" />
+        <link rel="stylesheet" href="./code/tokohei_style.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kaisei+Tokumin&display=swap" rel="stylesheet">
     </head>
     <body>
         <header>
-
+            <img id="logo" src="./img/tokohei_logo.png" alt="tokohei_logo">
+            <nav id="nav">
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="https://web.star7.jp/mypage/mobile_info.php?p=21c008f20e">Web予約</a></li>
+                    <li><a href="service.html">サービス</a></li>
+                    <li><a href="history.html">床平の歴史</a></li>
+                    <li><a href="intro.html">店内紹介</a></li>
+                    <li><a href="policy.html">プライバシーポリシー</a></li>
+                </ul>
         </header>
+        <main>  
+            <section id="home1">
+                <img id="top" src="./img/top.jpg" alt="top">
+            </section>
+            <section id="home2">
+            <img id="icon" src="./img/tokohei_icon.png" alt="tokohei_icon">
+            <h1>散髪処　床平</h1>
+            <h2 id="greeting">JAZZの音楽とアンティークな品々で、<br>
+                お客様をリラックスした空間でお迎え致します。<br>
+                ゆったりくつろげるカフェのようなプライベートな時間をお過ごし下さい。<br>
+                お客様に納得の時間をお過ごし頂くため、予約制にて営業致しております。<br>
+                皆様にお会いできる事を、とても楽しみにしております。店主</h2>
+            <div class="button-container">
+                <button id="intro"><a href="intro.html">店内紹介</a></button>
+            </div>
+            </section>
+            <section id="home3">
+                <div id="calender-container">
+                    <div id="calender-title">
+                    <button id="prev">前</button>
+                    <span id="title"></span>
+                    <button id="next">次</button>
+                    </div>
+                    <table id="calender"></table>
+                </div>
+                <div id="calender-info">
+                    <h3>営業カレンダー</h3>
+                    <p>
+                        赤色の部分がお休みの日です。<br>
+                        定休日は毎週　月火となっています。<br>
+                        定休日以外もお休みをいただくことがございます。<br>
+                        来店の際には営業日をご確認ください。<br>
+                        また当店は予約制となっております。<br>
+                        ご来店の際は、事前にご予約をお願い致します。<br>
+                    </p>
+                </div>
+            </section>
+            <section id="home4">
+                <div id="service-text">
+                <h3>メニュー＆サービス</h3>
+                <p>各種サービスと内容<br>
+                    と<br>
+                    料金表<br>
+                </p>
+                <div id="service-pic">
+                    <img src="img/tokohei_pic.jpg" alt="service_pic">
+                </div>
+            </section>
+        </main>
         <!--script-->
-        <script src=></script>
+        <script src="code/tokohei.js"></script>
     </body>
 </html>
