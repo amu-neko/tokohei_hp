@@ -6,14 +6,14 @@
         <!--resetCSS-->
         <link rel="stylesheet" href="https://unpkg.com/modern-css-reset/dist/reset.min.css"/>
         <!--CSS-->
-        <link rel="stylesheet" href="./code/tokohei_style.css" />
+        <link rel="stylesheet" href="tokohei_style.css" />
         <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Kaisei+Tokumin&display=swap" rel="stylesheet">
     </head>
     <body>
         <header>
-            <img id="logo" src="./img/tokohei_logo.png" alt="tokohei_logo">
+            <img id="logo" src="../img/tokohei_logo.png" alt="tokohei_logo">
             <nav id="nav">
                 <ul>
                     <li><a href="home.html">Home</a></li>
@@ -26,10 +26,10 @@
         </header>
         <main>  
             <section id="home1">
-                <img id="top" src="./img/top.jpg" alt="top">
+                <img id="top" src="../img/top.jpg" alt="top">
             </section>
             <section id="home2">
-            <img id="icon" src="./img/tokohei_icon.png" alt="tokohei_icon">
+            <img id="icon" src="../img/tokohei_icon.png" alt="tokohei_icon">
             <h1>散髪処　床平</h1>
             <h2 id="greeting">JAZZの音楽とアンティークな品々で、<br>
                 お客様をリラックスした空間でお迎え致します。<br>
@@ -68,12 +68,80 @@
                     と<br>
                     料金表<br>
                 </p>
+                <div class="button">
+                    <a id="service" href="./service.html">サービス詳細</a>
+                  </div>
+                  
+                </div>
                 <div id="service-pic">
-                    <img src="img/tokohei_pic.jpg" alt="service_pic">
+                    <img src="../img/tokohei_pic.jpg" alt="service_pic">
+                </div>
+            </section>
+            <section id="home5">
+                <div id="reserve-pic">
+                    <img src="../img/tokohei_reserve.jpg" alt="reserve_pic">
+                </div>
+                <div id="reserve-text">
+                    <h3>Web予約</h3>
+                    <p>
+                        当店では<br>
+                        スマートフォンやパソコンなどから<br>
+                        気軽に、そして簡単に予約をしたり、<br>
+                        確認やキャンセルなどをして頂ける<br>
+                        予約管理システムを導入しています。
+                    </p>
+                    <div class="button">
+                        <a id="reserve" href="https://web.star7.jp/mypage/mobile_info.php?p=21c008f20e">予約サイト</a>
+                      </div>
+                   
+                </div>
+
+            </section>
+            <sectionv id="home6">
+                <div class="access-container" id="access-text">
+                    <div id="access">
+                        <h3>■住所</h3>
+                        <p>〒485-0028<br>
+                            愛知県小牧市東新町51番地</p>
+                    </div>
+                    <div id="tel">
+                        <h3 class="tel">■TEL</h3>
+                        <p class="tel">070-8574-1894</p>
+                    </div>
+                    <div  id="time">
+                        <h3>■営業時間</h3>
+                        <p>
+                            受付時間　9:00~19:00<br>
+                            定休日　月曜日・火曜日<br>
+                        </p>
+                    </div>
+                    <div id="parking">
+                        <h3>■駐車場</h3>
+                        <p>店舗前に3台分の駐車スペースと駐輪場があります。</p>
+                    </div>
+                    <div id="time">
+                        <h3>■SNS</h3>
+                        <p>Instagram、Facebook<br>あります。</p>
+                        <a href=https://www.instagram.com/to_ko_hei>
+                        <img id="instagram" src="../img/Instagram-logo.png" alt="Instagram"></a>
+                    </div>
+                <div class="access-container" id="map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3891.8438641708844!2d136.92666982482757!3d35.28621780343075!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6003733140442daf%3A0x1e3eda7ec4c727e0!2z5pel5pys44CB44CSNDg1LTAwMjgg5oSb55-l55yM5bCP54mn5biC5p2x5paw55S677yV77yR!5e0!3m2!1sja!2sus!4v1746676793727!5m2!1sja!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </section>
         </main>
+        <footer>
+            <nav id="nav">
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="https://web.star7.jp/mypage/mobile_info.php?p=21c008f20e">Web予約</a></li>
+                    <li><a href="service.html">サービス</a></li>
+                    <li><a href="history.html">床平の歴史</a></li>
+                    <li><a href="intro.html">店内紹介</a></li>
+                    <li><a href="policy.html">プライバシーポリシー</a></li>
+                </ul>
+        </footer>
         <!--script-->
-        <script src="code/tokohei.js"></script>
+        <script src="tokohei.js"></script>
     </body>
 </html>
