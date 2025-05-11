@@ -6,6 +6,7 @@ body{
     color: #28385E;
     background-color: #cccccc;
     font-family: "Kaisei Tokumin", serif;
+    overflow-x: hidden
 }
 
 /*header*/
@@ -16,7 +17,7 @@ header{
 }
 #logo{
     padding-top: 40px;
-    width: 400px;
+    width: 25%;
     height: auto;
 }
 #hanburger{
@@ -158,7 +159,7 @@ button a{
     flex-direction: column;
     align-items: center;
     width: 35%;
-    height: auto;
+    height: 60%;
     background-color: #6A91C1;
     color: #cccccc;
     border-radius: 10px;
@@ -166,7 +167,7 @@ button a{
 #calender-title{
     display: flex;
     font-size: 50px;
-    margin-top: 20px;
+    margin-top: 1.5rem;
 }
 #prev, #next{
     display: flex;
@@ -197,7 +198,6 @@ button a{
 th,td{
     text-align: center;
     font-size: 25px;
-    margin-bottom: 10px;
 }
 .today{
     background-color: #28385E;
@@ -206,18 +206,17 @@ th,td{
     width: 50%;
     margin-top: 100px;
     margin-left: 50px;
+    margin-bottom: 1rem;
 }
 #calender-info h3{
     text-align: center;
     font-size: 2rem;
     border-bottom: 5px solid #28385E;
-    margin-bottom: 20px;
 }
 #calender-info p{
     text-align: center;
     font-size: 1.5rem;
     line-height: 2.5;
-    margin-bottom: 20px;
 }
 
 
@@ -238,7 +237,7 @@ th,td{
 }
 #service-text h3{
     font-size: 2.5rem;
-    width: 70%;
+    width: 90%;
     text-align: center;
     color: #28385E;
     border-bottom:5px solid #28385E;
@@ -248,15 +247,14 @@ th,td{
 #service-text p{
     font-size: 1.5rem;
     text-align: center;
-    margin-right: 20%;
     padding-top: 2rem;
 }
 #service-pic{
     width:40%;
     height: auto;
-    margin-left: 5%;
-    margin-right: 50px;
-    padding: 75px;
+    margin-left: auto;
+    margin-left: 50px;
+    padding: 2rem;
     background-image: url(../img/frame-white.png);
     background-size: contain;
     background-repeat: no-repeat;
@@ -264,13 +262,14 @@ th,td{
 #service-pic img{ 
    width: 90%;
     height: auto;
-    border-radius: 80px;
-    margin-right: -20px;
+    border-radius: 3rem;
+    margin-left: 5%;
 }
 
 
 #service{
     margin-top: 5%;
+    margin-left: auto;
     margin-right: auto;
     font-size: 1.5rem;
     font-weight: bold;
@@ -280,42 +279,44 @@ th,td{
 
 
 /*home5*/
-#reserrve-text{
+#reserve-text{
     width: 60%;
     display: flex;
     flex-direction: column;
+    justify-content: center; /* 縦の中央寄せ */
+  align-items: flex-end;   /* 右寄せ */
+  text-align: right;       /* テキストを右寄せ */
 }
 #reserve-text h3{
     font-size: 2.5rem;
-    width: 100%;
+    width: 80%;
     text-align: center;
     color: #28385E;
     border-bottom:5px solid #28385E;;
-    margin-left: auto;
-    margin-right: -35%;
-    padding: 0 0.5rem;
-    margin-top: 5%;
+    margin: 0 auto;
 }
 #reserve-text p{
-    margin-left: auto;;
-    margin-right: -70%; 
+    margin-left: auto;
     font-size: 1.5rem;
     text-align: center;
-    padding: 2rem 1.5rem 1rem 1.5rem;
+   margin: 5% auto;
+}
+#reserve-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 #reserve{
-    margin-top: 10%;
     font-size: 1.5rem;
-    height: 3.5rem;
     font-weight: bold;
-    margin-right: -40%;
+    height: 3.5rem;
 }
 #reserve-pic{
     width:40%;
     height: auto;
     margin-left: auto;
     margin-left: 50px;
-    padding: 75px;
+    padding: 2rem;
     background-image: url(../img/frame-white.png);
     background-size: contain;
     background-repeat: no-repeat;
@@ -426,27 +427,454 @@ footer nav{
 /*responsive*/
 /* スマホサイズ（幅768px以下）のときだけ切り替える */
 @media (max-width: 768px) {
-  .hamburger {
-    display: block;
-    width: 30px;
-    cursor: pointer;
-    margin: 20px;
+    /* 全体レイアウト調整 */
+    section {
+      flex-direction: column !important;
+      padding: 1rem;
+    }
+  
+    /* ヘッダー内ロゴとナビゲーション */
+    header {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10px;
   }
 
-  .hamburger span {
-    display: block;
-    height: 3px;
-    background: #333;
-    margin: 6px 0;
+  #logo {
+    width: 120px!important;   /* 小さめのロゴサイズ */
+    height: auto;
+    padding: 0;
+    margin: 0;
   }
-
-  .menu {
-    display: none;
-    background: #f0f0f0;
-    padding: 10px;
+    #nav {
+      flex-direction: column;
+      padding: 0;
+      margin-top: 10px;
+    }
+  
+    #nav li {
+      display: block;
+      width: 100%;
+      margin: 5px 0;
+      border: none;
+      text-align: center;
+    }
+  
+    /* カレンダーセクション */
+    #home3 {
+      flex-direction: column;
+      margin-bottom: 40px;
+      align-items: center;
+    }
+  
+    #calender-container, #calender-info {
+      width: 95%;
+      margin: 20px 0;
+    }
+  
+    #calender-title {
+      font-size: 1.5rem;
+      justify-content: center;
+    }
+  
+    #prev, #next {
+      font-size: 0.9rem;
+      margin: 5px 10px;
+      width: 60px;
+      height: 25px;
+    }
+  
+    table#calender {
+      font-size: 0.8rem;
+      margin-bottom: 0;
+    }
+  
+    th, td {
+      font-size: 1rem;
+      padding: 5px;
+    }
+  
+    #calender-info h3 {
+      font-size: 1.5rem;
+    }
+  
+    #calender-info p {
+      font-size: 1rem;
+      line-height: 1.8;
+    }
+  
+    /* home4（サービス紹介）と home5（予約） */
+    #home4, #home5 {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    #service-text, #reserve-text {
+      width: 100%;
+      text-align: center;
+      padding: 0;
+    }
+  
+    #service-pic, #reserve-pic {
+      width: 100%;
+      margin: 10px 0;
+      padding: 1rem;
+    }
+  
+    #service-pic img, #reserve-pic img {
+      width: 90%;
+      margin: 0 auto;
+    }
+  
+    /* ボタン中央寄せ */
+    .button a, #reserve-container a {
+      font-size: 1.2rem;
+      padding: 8px 15px;
+    }
+  
+    /* home6（アクセス） */
+    #home6 {
+      flex-direction: column;
+      align-items: center;
+      padding: 1rem;
+    }
+  
+    #access-text, #map {
+      width: 100%;
+      margin: 10px 0;
+    }
+  
+    #map iframe {
+      width: 100%;
+      height: 300px;
+    }
+  
+    /* SNSリンク */
+    #sns {
+      flex-direction: column;
+      gap: 1rem;
+    }
+  
+    #instagram, #facebook {
+      width: 90%;
+      margin: 0 auto;
+    }
+  
+    #facebook-logo, #instagram-logo {
+      margin-right: 0.5rem;
+    }
+  
+    /* フッター */
+    footer {
+      font-size: 0.9rem;
+      height: auto;
+      padding: 10px 0;
+    }
+  
+    footer nav ul {
+      flex-direction: column;
+      padding: 0;
+    }
+  
+    footer nav li {
+      margin: 5px 0;
+      text-align: center;
+    }
   }
-
-  .menu.active {
-    display: block;
+  @media (max-width: 768px) {
+    /* 全体レイアウト調整 */
+    section {
+      flex-direction: column !important;
+      padding: 1rem;
+    }
+  
+    /* ヘッダー内ロゴとナビゲーション */
+    #logo {
+      width: 80%;
+      padding-top: 20px;
+      margin: 0 auto;
+      display: block;
+    }
+  
+    #nav {
+      flex-direction: column;
+      padding: 0;
+      margin-top: 10px;
+    }
+  
+    #nav li {
+      display: block;
+      width: 100%;
+      margin: 5px 0;
+      border: none;
+      text-align: center;
+    }
+  
+    /* カレンダーセクション */
+    #home3 {
+      flex-direction: column;
+      margin-bottom: 40px;
+      align-items: center;
+    }
+  
+    #calender-container, #calender-info {
+      width: 95%;
+      margin: 20px 0;
+    }
+  
+    #calender-title {
+      font-size: 1.5rem;
+      justify-content: center;
+    }
+  
+    #prev, #next {
+      font-size: 0.9rem;
+      margin: 5px 10px;
+      width: 60px;
+      height: 25px;
+    }
+  
+    table#calender {
+      font-size: 0.8rem;
+      margin-bottom: 0;
+    }
+  
+    th, td {
+      font-size: 1rem;
+      padding: 5px;
+    }
+  
+    #calender-info h3 {
+      font-size: 1.5rem;
+    }
+  
+    #calender-info p {
+      font-size: 1rem;
+      line-height: 1.8;
+    }
+  
+    /* home4（サービス紹介）と home5（予約） */
+    #home4, #home5 {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    #service-text, #reserve-text {
+      width: 100%;
+      text-align: center;
+      padding: 0;
+    }
+  
+    #service-pic, #reserve-pic {
+      width: 100%;
+      margin: 10px 0;
+      padding: 1rem;
+    }
+  
+    #service-pic img, #reserve-pic img {
+      width: 90%;
+      margin: 0 auto;
+    }
+  
+    /* ボタン中央寄せ */
+    .button a, #reserve-container a {
+      font-size: 1.2rem;
+      padding: 8px 15px;
+    }
+  
+    /* home6（アクセス） */
+    #home6 {
+      flex-direction: column;
+      align-items: center;
+      padding: 1rem;
+    }
+  
+    #access-text, #map {
+      width: 100%;
+      margin: 10px 0;
+    }
+  
+    #map iframe {
+      width: 100%;
+      height: 300px;
+    }
+  
+    /* SNSリンク */
+    #sns {
+      flex-direction: column;
+      gap: 1rem;
+    }
+  
+    #instagram, #facebook {
+      width: 90%;
+      margin: 0 auto;
+    }
+  
+    #facebook-logo, #instagram-logo {
+      margin-right: 0.5rem;
+    }
+  
+    /* フッター */
+    footer {
+      font-size: 0.9rem;
+      height: auto;
+      padding: 10px 0;
+    }
+  
+    footer nav ul {
+      flex-direction: column;
+      padding: 0;
+    }
+  
+    footer nav li {
+      margin: 5px 0;
+      text-align: center;
+    }
   }
-}
+  @media (max-width: 768px) {
+    /* 全体レイアウト調整 */
+    section {
+      flex-direction: column !important;
+      padding: 1rem;
+    }
+  
+    /* ヘッダー内ロゴとナビゲーション */
+    #logo {
+      margin-left: 1rem;
+      padding-bottom: 1rem;
+      display: block;
+    }
+  
+    #nav {
+            display: none;
+    }
+  
+    #top{
+            width: 100%;
+            height: auto;
+          
+    }
+    /* カレンダーセクション */
+    #home3 {
+      flex-direction: column;
+      margin-bottom: 40px;
+      align-items: center;
+    }
+  
+    #calender-container, #calender-info {
+      width: 95%;
+      margin: 20px 0;
+    }
+  
+    #calender-title {
+      font-size: 1.5rem;
+      justify-content: center;
+    }
+  
+    #prev, #next {
+      font-size: 0.9rem;
+      margin: 5px 10px;
+      width: 60px;
+      height: 25px;
+    }
+  
+    table#calender {
+      font-size: 0.8rem;
+      margin-bottom: 0;
+    }
+  
+    th, td {
+      font-size: 1rem;
+      padding: 5px;
+    }
+  
+    #calender-info h3 {
+      font-size: 1.5rem;
+    }
+  
+    #calender-info p {
+      font-size: 1rem;
+      line-height: 1.8;
+    }
+  
+    /* home4（サービス紹介）と home5（予約） */
+    #home4, #home5 {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    #service-text, #reserve-text {
+      width: 100%;
+      text-align: center;
+      padding: 0;
+    }
+  
+    #service-pic, #reserve-pic {
+      width: 100%;
+      margin: 10px 0;
+      padding: 1rem;
+    }
+  
+    #service-pic img, #reserve-pic img {
+      width: 90%;
+      margin: 0 auto;
+    }
+  
+    /* ボタン中央寄せ */
+    .button a, #reserve-container a {
+      font-size: 1.2rem;
+      padding: 8px 15px;
+    }
+  
+    /* home6（アクセス） */
+    #home6 {
+      flex-direction: column;
+      align-items: center;
+      padding: 1rem;
+    }
+  
+    #access-text, #map {
+      width: 100%;
+      margin: 10px 0;
+    }
+  
+    #map iframe {
+      width: 100%;
+      height: 300px;
+    }
+  
+    /* SNSリンク */
+    #sns {
+      flex-direction: column;
+      gap: 1rem;
+    }
+  
+    #instagram, #facebook {
+      width: 90%;
+      margin: 0 auto;
+    }
+  
+    #facebook-logo, #instagram-logo {
+      margin-right: 0.5rem;
+    }
+  
+    /* フッター */
+    footer {
+      font-size: 0.9rem;
+      height: auto;
+      padding: 10px 0;
+    }
+  
+    footer nav ul {
+      flex-direction: column;
+      padding: 0;
+    }
+  
+    footer nav li {
+      margin: 5px 0;
+      text-align: center;
+    }
+  }
+      
