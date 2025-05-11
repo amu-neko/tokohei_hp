@@ -125,16 +125,12 @@ h1{
     margin-top: 20px;
     line-height: 2.5;
 }
-.button-container{
-    display: flex;
-    justify-content: flex-end;
-    overflow: hidden;
-}
-
 #intro{
-    margin-top: 70px;
-    margin-bottom: 30px;
-    margin-right: 20px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-right: 60px;
+    color: #cccccc;
+    font-size: 35px;
 }
 
 button a{
@@ -345,12 +341,15 @@ th,td{
     background-color: #28385E;
     color: #cccccc;
     height: 600px;
+    padding: 50px;
 }
 #access-text{
     width: 50%;
     display: flex;
     flex-direction: column;
-    padding-left: 20%;
+    justify-content: center;
+    margin-top: 5%;
+    margin-bottom: 10%;
 }
 
 #access-text h3{
@@ -379,13 +378,64 @@ th,td{
 #map{
     width: 50%;
     display: flex;
-    width: 100%;
-    height: auto;
-    margin-top: 70px;
-    padding-left: 20%;
+    height: 100%;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
 }
 
-#instagram{
-    width:40px;
-    height:40px;
+#sns{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
 }
+
+#facebook-logo{
+    margin-left: 1rem;
+    width: 30px;
+    height: 30px;
+}
+
+#instagram,#facebook{
+    margin-top: 1rem;
+    width: 30%;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+   display: flex;
+   flex-direction: row;
+   color: #28385E;
+   font-weight: 600;
+   border-radius: 10px;
+   background-color: #cccccc;
+   box-shadow:  0 0 0 5px #cccccc;
+   border: #28385E 3px dashed;
+}
+#instagram{
+    margin-left: 50px;
+}
+#instagram-logo{
+    margin-left: 1rem;
+    width: 30px;
+    height: 30px;
+}
+
+/*footer*/
+footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #6A91C1;
+    color: #cccccc;
+    height: 100px;
+}
+footer nav{
+    display: flex;
+    margin-top: 20px;
+}
+
+/*responsive*/
