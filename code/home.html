@@ -3,6 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width" />
+        <meta name="format-detection" content="telephone=no">
         <!--resetCSS-->
         <link rel="stylesheet" href="https://unpkg.com/modern-css-reset/dist/reset.min.css"/>
         <!--CSS-->
@@ -12,12 +13,13 @@
 <link href="https://fonts.googleapis.com/css2?family=Kaisei+Tokumin&display=swap" rel="stylesheet">
     </head>
     <body>
-        <header>
-            <div id="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
+
+         <section id="top"></section>
+        <section id="top-mb"></section>
+
+        <!--pc-->
+
+        <header id="pc-header">
             <img class="menu" id="logo" src="../img/tokohei_logo.png" alt="tokohei_logo">
             <nav id="nav">
                 <ul>
@@ -27,17 +29,37 @@
                     <li><a href="history.html">床平の歴史</a></li>
                     <li><a href="intro.html">店内紹介</a></li>
                     <li><a href="policy.html">プライバシーポリシー</a></li>
+                    
                 </ul>
         </header>
+
+        <!--mobile-->
+        <header id="mb-header">
+       <img class="menu" id="logo" src="../img/tokohei_logo.png" alt="tokohei_logo">
+        <button class="hamburger-menu" id="js-hamburger-menu">
+         <span class="hamburger-menu__bar"></span>
+        <span class="hamburger-menu__bar"></span>
+         <span class="hamburger-menu__bar"></span>
+        </button>
+        <nav class="navigation">
+            <ul class="navigation__list">
+                <li class="navigation__list-item"><a href="home.html" class="navigation__link">Home</a></li>
+                <li class="navigation__list-item"><a href="https://web.star7.jp/mypage/mobile_info.php?p=21c008f20e" class="navigation__link">Web予約</a></li>
+                <li class="navigation__list-item"><a href="service.html" class="navigation__link">サービス</a></li>
+                <li class="navigation__list-item"><a href="history.html" class="navigation__link">床平の歴史</a></li>
+                <li class="navigation__list-item"><a href="intro.html" class="navigation__link">店内紹介</a></li>
+                <li class="navigation__list-item"><a href="policy.html" class="navigation__link">プライバシーポリシー</a></li>
+            </ul>
+        </nav>
+    </header>
+
         <main>  
-            <section id="home1">
-                <img id="top" src="../img/top.jpg" alt="top">
-            </section>
+
             <section id="home2">
             <img id="icon" src="../img/tokohei_icon.png" alt="tokohei_icon">
             <h1>散髪処　床平</h1>
             <h2 id="greeting">JAZZの音楽とアンティークな品々で、<br>
-                お客様をリラックスした空間でお迎え致します。<br>
+                お客様をリラックスした空間で<br class="mobile">お迎え致します。<br>
                 ゆったりくつろげるカフェのようなプライベートな時間をお過ごし下さい。<br>
                 お客様に納得の時間をお過ごし頂くため、予約制にて営業致しております。<br>
                 皆様にお会いできる事を、とても楽しみにしております。店主</h2>
@@ -59,10 +81,10 @@
                     <p>
                         赤色の部分がお休みの日です。<br>
                         定休日は毎週　月火となっています。<br>
-                        定休日以外もお休みをいただくことがございます。<br>
+                        定休日以外もお休みをいただくことが<br class="mobile">ございます。<br>
                         来店の際には営業日をご確認ください。<br>
                         また当店は予約制となっております。<br>
-                        ご来店の際は、事前にご予約をお願い致します。<br>
+                        ご来店の際は、事前にご予約を<br class="mobile">お願い致します。<br>
                     </p>
                 </div>
             </section>
@@ -75,11 +97,12 @@
                     カット、カラー、パーマなど。<br>
                     各種カード、電子マネーにも対応しています。<br>
                 </p>
-                <div class="button">
+                <div class="button" id="service-container">
                     <a id="service" href="./service.html">サービス詳細</a>
                   </div>
                   
                 </div>
+
                 <div id="service-pic">
                     <img src="../img/tokohei_pic.jpg" alt="service_pic">
                 </div>
@@ -112,8 +135,8 @@
                             愛知県小牧市東新町51番地</p>
                     </div>
                     <div id="tel">
-                        <h3 class="tel">■TEL</h3>
-                        <p class="tel">070-8574-1894</p>
+                        <h3>■TEL</h3>
+                        <p>070-8574-1894</p>
                     </div>
                     <div  id="time">
                         <h3>■営業時間</h3>
@@ -130,17 +153,14 @@
                     <div id="time">
                         <h3>■SNS</h3>
                         <div id="sns">
-                            <div id="facebook">
-                                <a href="https://www.facebook.com/sanpatu.tokohei">
-                                    <img id="facebook-logo" src="../img/facebook-logo.png" alt="Facebook">
-                                </a>
-                                <p>Facebook</p>
-                                </div>
-                            <div id="instagram">
-                        <a href=https://www.instagram.com/to_ko_hei>
-                        <img id="instagram-logo" src="../img/Instagram-logo.png" alt="Instagram"></a>
-                        <p>Instagram</p>
-                            </div>
+                            <a href="https://www.facebook.com/sanpatu.tokohei" class="facebook">
+                                <img id="facebook-logo" src="../img/facebook-logo.png" alt="facebook">
+                                Facebook
+                            </a>
+                             <a href="https://www.instagram.com/to_ko_hei/" class="instagram">
+                                <img id="instagram-logo" src="../img/Instagram-logo.png" alt="instagram">
+                                instagram
+                            </a>
                     </div>
                     </div>
                 </div>
@@ -150,17 +170,22 @@
             </section>
         </main>
         <footer>
-            <nav id="nav">
-                <ul>
+            <nav id="footer-nav">
+                <ul id="footer-nav1">
                     <li><a href="home.html">Home</a></li>
                     <li><a href="https://web.star7.jp/mypage/mobile_info.php?p=21c008f20e">Web予約</a></li>
                     <li><a href="service.html">サービス</a></li>
+                </ul>
+                <ul id="footer-nav2">
                     <li><a href="history.html">床平の歴史</a></li>
                     <li><a href="intro.html">店内紹介</a></li>
                     <li><a href="policy.html">プライバシーポリシー</a></li>
                 </ul>
         </footer>
         <!--script-->
-        <script src="tokohei.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.min.js"></script>
+        <script src="tokohei-header.js"></script>
+        <script src="tokohei-calendar.js"></script>
+        
     </body>
 </html>

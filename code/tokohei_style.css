@@ -1,8 +1,9 @@
 @charset "UTF-8";
 body{
-    width: 100%;    
-    margin: 0;
-    padding: 0;
+    width: 100%; 
+    height: 100%;   
+    margin: 0!important;
+    padding: 0!important;
     color: #28385E;
     background-color: #cccccc;
     font-family: "Kaisei Tokumin", serif;
@@ -10,19 +11,34 @@ body{
 }
 
 /*header*/
-header{
+#pc-header{
     background-color: #6A91C1;
     width: 100%;
     height: 150px;
 }
+.fixed{
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+#mb-header{
+  display:none
+}
+
+/*main*/
+
 #logo{
     padding-top: 40px;
     width: 25%;
     height: auto;
 }
-#hanburger{
+.hanburger{
     display :none;
     }
+  .navigation{
+    display: none;
+  }
 #nav{
     display: flex;
     justify-content: flex-end;
@@ -55,7 +71,6 @@ header{
     color:#28385E;
     border-bottom: 2px solid #28385E;
 }
-
 
 /*button*/
 .button a {
@@ -104,6 +119,29 @@ section{
     width:100%;
     height: auto;
 }
+/*home1*/
+#top{
+  display: block;
+    width: 100vw;
+    height: 100vh;
+    background-image: url("../img/top.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0;
+    transform: translateY(-100px);
+    animation-name: fadeIn;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+}
+@keyframes fadeIn{
+  0%{opacity: 0;}
+  100%{opacity: 1;
+        transform: translate(0);}
+}
+#top-mb{
+  display: none;
+}
 
 /*home2*/
 #home2{
@@ -144,7 +182,9 @@ button a{
 }
 
 
-
+.mobile{
+  display: none;
+}
 /*home3*/
 #home3{
     flex-direction: row;
@@ -153,6 +193,7 @@ button a{
     margin-bottom: 200px;
 }
 #calender-container{
+    order: 1;
     margin-top: 100px;
     margin-left: 100px;
     display: flex;
@@ -207,6 +248,7 @@ th,td{
     margin-top: 100px;
     margin-left: 50px;
     margin-bottom: 1rem;
+    order:2;
 }
 #calender-info h3{
     text-align: center;
@@ -260,10 +302,10 @@ th,td{
     background-repeat: no-repeat;
 }
 #service-pic img{ 
-   width: 90%;
-    height: auto;
-    border-radius: 3rem;
-    margin-left: 5%;
+  width: 85%;
+  margin: 1.5rem auto;
+  height: auto;
+  border-radius: 3rem;
 }
 
 
@@ -275,7 +317,11 @@ th,td{
     font-weight: bold;
     height: 3.5rem;
 }
-
+#service-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
 
 
 /*home5*/
@@ -322,9 +368,10 @@ th,td{
     background-repeat: no-repeat;
 }
 #reserve-pic img{
-    width: 95%;
+    width: 85%;
+    margin: 1.5rem auto;
     height: auto;
-    border-radius: 80px;
+    border-radius: 3rem;
 }
 
 /*home6*/
@@ -367,6 +414,7 @@ th,td{
     justify-content: center;
     align-items: center;
     margin-top: 5%;
+    margin-bottom: 0;
 }
 
 #sns{
@@ -379,12 +427,12 @@ th,td{
 }
 
 #facebook-logo{
-    margin-left: 1rem;
+  margin-left: 0.5rem;
     width: 1.5rem;
     height: 1.5rem;
 }
-
-#instagram,#facebook{
+.instagram,.facebook{
+  width:25%;
     margin-top: 1rem;
     height: 50px;
     justify-content: center;
@@ -397,12 +445,13 @@ th,td{
    background-color: #cccccc;
    box-shadow:  0 0 0 5px #cccccc;
    border: #28385E 3px dashed;
+   gap: 1rem;
 }
-#instagram{
+.instagram{
     margin-left: 50px;
 }
 #instagram-logo{
-    margin-left: 1rem;
+    margin-left: 0.5rem;
     width: 30px;
     height: 30px;
 }
@@ -411,55 +460,413 @@ th,td{
 }
 /*footer*/
 footer{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     background-color: #6A91C1;
     color: #cccccc;
-    height: 100px;
+    height: 70px;
 }
-footer nav{
-    display: flex;
-    margin-top: 20px;
+#footer-nav {
+  display: flex;
+  flex-direction: row; /* ← これで横並び */
+  justify-content: center;
+  font-weight: bold;
+  text-align: center;
 }
 
+#footer-nav1, #footer-nav2 {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+
+#footer-nav ul {
+  list-style: disc;
+  padding: 0;
+  margin: 2rem 0;
+  margin-right: 1.5rem;
+  text-align: center;
+}
+#footer-nav li a{
+  text-decoration: none;
+  color: #cccccc;
+}
+#footer-nav a:hover{
+    color:#28385E;
+    border-bottom: 2px solid #28385E;
+}
+
+/*service*/
+#cut,#color,#other{
+ width:80%;
+    height: 100%;
+margin: 2rem auto;
+    padding: 1rem;
+    background-image: url(../img/frame.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    border: #28385E solid 3px;
+    border-radius: 100px;
+}
+
+#cut h1{
+  width: 80%;
+  color: #516CBD;
+  border-bottom: #516CBD solid 5px;
+  text-align: center;
+  margin-left: 10%;
+  align-content: center;
+  justify-content: center;
+}
+#cut h2{
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0 auto;
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+  border: #516CBD double 2px;
+  padding: 0 1rem;
+}
+#student{
+  width: 100%;
+ display: flex;
+ flex-direction: row;
+ gap: 10%;
+ margin-left: 20%;
+padding-bottom: 1rem;
+}
+#color h1{
+  width: 80%;
+  color: #516CBD;
+  border-bottom: #516CBD solid 5px;
+  text-align: center;
+  margin-left: 10%;
+  align-content: center;
+  justify-content: center;
+}
+#color h2{
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0 auto;
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+  border: #516CBD double 2px;
+  padding: 0 1rem;
+}
+#other h1{
+  width: 80%;
+  color: #516CBD;
+  border-bottom: #516CBD solid 5px;
+  text-align: center;
+  margin-left: 10%;
+  align-content: center;
+  justify-content: center;
+}
+#other h2{
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0 auto;
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+  padding: 0 1rem;
+}
+#pay{
+  margin: 1rem auto;
+}
+#pay img{
+  width: 50%;
+  margin: 0 auto;
+  border-radius: 100px;
+}
+
+/*history*/
+.history-container{
+  width: 100%;
+  height: 100%;
+}
+.history-container img{
+  width: 80%;
+  height: 80%;
+  margin: 1rem auto;
+}
+/*policy*/
+#policy{
+  margin: 0 1rem;
+  font-family: serif;
+}
+#policy p{
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+/*intro*/
+li{
+    list-style: none;
+}
+
+.slide-container{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    position: relative;
+}
+.slide{
+    width: 800%;
+    height: 100%;
+    display: flex;
+    transition: all 0.7s;
+}
+.slide div { /* スライド */
+  width: 12.5%;
+  height: 100%;
+  font-size: 16px;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+.slide img{
+  width: 50%;
+  height: auto;
+  max-height:50%;
+  margin: 2rem auto;
+}
+.slide1{
+    transform: translateX(0);
+}
+.slide2{
+    transform: translateX(-12.5%);
+}
+.slide3{
+    transform: translateX(-25%);
+}
+.slide4{
+    transform: translateX(-37.5%);
+}
+.slide5{
+    transform: translateX(-50%);
+}
+.slide6{
+    transform: translateX(-62.5%);
+}
+.slide7{
+    transform: translateX(-75%);
+}
+.slide8{
+    transform: translateX(-87.5%);
+}
+.slide-next{
+    position:absolute;
+    width: 1rem;
+    height: 1rem;
+    right: 10%;
+    bottom: 50%;
+    z-index: 10;
+    cursor: pointer;
+    border-top: solid 3px #28385E;
+    border-right: solid 3px #28385E;
+    -webkit-transform: rotate(45deg)translateY(50%);
+    transform: rotate(45deg)translateY(50%);
+}
+.slide-prev{
+    position:absolute;
+    width: 1rem;
+    height: 1rem;
+    left: 10%;
+    bottom: 50%;
+    z-index: 10;
+    cursor: pointer;
+    border-top: solid 3px #28385E;
+    border-right: solid 3px #28385E;
+    -webkit-transform: rotate(-135deg)translateY(-50%);
+    transform: rotate(-135deg)translateY(-50%);
+}
+.indicator{
+    width: 100%;
+    position: absolute;
+    bottom: 0.1rem;
+    display: flex;
+    column-gap: 18px;
+    z-index: 10;
+    justify-content: center;
+    align-items: center;
+}
+.indicator ul{
+  margin: 0;
+  padding: 0;
+}
+.indicator li{
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    list-style: none;
+    background-color: #cccccc;
+    border: 2px #28385E solid;
+    cursor: pointer;
+}
+.indicator li:first-of-type{
+    background-color: #000;
+}
 /*responsive*/
 /* スマホサイズ（幅768px以下）のときだけ切り替える */
 @media (max-width: 768px) {
-    /* 全体レイアウト調整 */
-    section {
-      flex-direction: column !important;
-      padding: 1rem;
+  /* 念のためbodyにもスクロール防止 */
+  body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+#pc-header{
+  display: none;
+}
+header{
+  height: 20%;
+  transition: position 0.3s ease;
+}
+.fixed{
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+#mb-header {
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  background-color: #6A91C1;
+  position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    opacity: 0;
+}
+
+.hamburger-menu {
+  width: 50px;
+  height: 50px;
+  position: relative;
+  border: none;
+  background: transparent;
+  appearance: none;
+  padding: 0;
+  cursor: pointer;
+}
+.hamburger-menu__bar {
+  display: inline-block;
+  width: 44%;
+  height: 2px;
+  background: #cccccc;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: .5s;
+}
+.hamburger-menu__bar:first-child {
+  top: 16px;
+}
+.hamburger-menu__bar:nth-child(2) {
+  top: 24px;
+}
+.hamburger-menu__bar:last-child {
+  top: 32px;
+}
+.hamburger-menu--open .hamburger-menu__bar {
+  top: 50%;
+}
+.hamburger-menu--open .hamburger-menu__bar:first-child {
+  transform: translateX(-50%) translateY(-50%) rotate(45deg);
+}
+.hamburger-menu--open .hamburger-menu__bar:last-child {
+  transform: translateX(-50%) translateY(-50%) rotate(-45deg);
+}
+.hamburger-menu--open .hamburger-menu__bar:nth-child(2) {
+  display: none;
+}
+.navigation {
+  display: none;
+  background: #28385E;
+  position: absolute;
+  top: 100px;
+  width: 100%;
+  z-index: 9999;
+}
+.navigation__list {
+  text-align: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.navigation__list-item {
+  border-bottom: solid 1px #cccccc;
+}
+.navigation__list-item:first-child {
+  border-top: solid 1px #cccccc;
+}
+.navigation__link {
+  color: #cccccc;
+  font-weight: 700;
+  text-decoration: none;
+  display: block;
+  padding: 24px 0;
+  transition: .5s;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .navigation__link:hover {
+    background: #cccccc;
+  }
+}
+#top{
+      display: none;
     }
-  
-    /* ヘッダー内ロゴとナビゲーション */
-    header {
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0 10px;
+ #top-mb{
+    display: block;
+    width: 100vw;
+    height:100vh;
+    background-image: url("../img/top-mb.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    opacity: 0;
+    animation-name: fadeIn;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+    }
+    .fixed-mb{
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+   
+  #logo {
+    width: 50%!important;
+    height: auto !important;
+    padding: 0 !important;
+    margin: 0 auto !important;
+    margin-left: 1rem!important;
+    display: block;
   }
 
-  #logo {
-    width: 120px!important;   /* 小さめのロゴサイズ */
-    height: auto;
-    padding: 0;
-    margin: 0;
-  }
-    #nav {
-      flex-direction: column;
-      padding: 0;
-      margin-top: 10px;
+    #home2 h1{
+      font-size: 2rem;
     }
-  
-    #nav li {
+    #icon{
+      width: 50%;
+      height: auto;
+      margin: 1rem auto;
+    }
+    #greeting{
+      font-size: 1rem;
+    }
+    .mobile{
       display: block;
-      width: 100%;
-      margin: 5px 0;
-      border: none;
-      text-align: center;
+    }
+    #intro{
+    font-size: 1.5rem;
+      margin: 1rem auto;
     }
   
     /* カレンダーセクション */
@@ -468,7 +875,13 @@ footer nav{
       margin-bottom: 40px;
       align-items: center;
     }
-  
+    #calender-container{
+      order:2;
+      padding-bottom:1rem ;
+    }
+    #calender-info{
+      order:1;
+    }
     #calender-container, #calender-info {
       width: 95%;
       margin: 20px 0;
@@ -516,18 +929,31 @@ footer nav{
       text-align: center;
       padding: 0;
     }
+    #service-text h3,#reserve-text h3{
+      font-size: 1.5rem;
+    }
+    #service-text p,#reserve-text p{
+      font-size: 1rem;
+    }
   
     #service-pic, #reserve-pic {
       width: 100%;
-      margin: 10px 0;
-      padding: 1rem;
-    }
-  
-    #service-pic img, #reserve-pic img {
-      width: 90%;
       margin: 0 auto;
     }
   
+    #service-pic img, #reserve-pic img {
+      width: 100%!important;
+      margin: 0 auto;
+    }
+   #service,#reserve{
+    margin:1.5rem 0;
+   }
+    #reserve-text{
+      order:1;
+    }
+    #reserve-pic{
+      order: 2;
+    }
     /* ボタン中央寄せ */
     .button a, #reserve-container a {
       font-size: 1.2rem;
@@ -538,308 +964,35 @@ footer nav{
     #home6 {
       flex-direction: column;
       align-items: center;
-      padding: 1rem;
-    }
-  
-    #access-text, #map {
-      width: 100%;
-      margin: 10px 0;
-    }
-  
-    #map iframe {
-      width: 100%;
-      height: 300px;
-    }
-  
-    /* SNSリンク */
-    #sns {
-      flex-direction: column;
-      gap: 1rem;
-    }
-  
-    #instagram, #facebook {
-      width: 90%;
-      margin: 0 auto;
-    }
-  
-    #facebook-logo, #instagram-logo {
-      margin-right: 0.5rem;
-    }
-  
-    /* フッター */
-    footer {
-      font-size: 0.9rem;
-      height: auto;
-      padding: 10px 0;
-    }
-  
-    footer nav ul {
-      flex-direction: column;
-      padding: 0;
-    }
-  
-    footer nav li {
-      margin: 5px 0;
-      text-align: center;
-    }
-  }
-  @media (max-width: 768px) {
-    /* 全体レイアウト調整 */
-    section {
-      flex-direction: column !important;
-      padding: 1rem;
-    }
-  
-    /* ヘッダー内ロゴとナビゲーション */
-    #logo {
-      width: 80%;
-      padding-top: 20px;
-      margin: 0 auto;
-      display: block;
-    }
-  
-    #nav {
-      flex-direction: column;
-      padding: 0;
-      margin-top: 10px;
-    }
-  
-    #nav li {
-      display: block;
-      width: 100%;
-      margin: 5px 0;
-      border: none;
-      text-align: center;
-    }
-  
-    /* カレンダーセクション */
-    #home3 {
-      flex-direction: column;
-      margin-bottom: 40px;
-      align-items: center;
-    }
-  
-    #calender-container, #calender-info {
-      width: 95%;
-      margin: 20px 0;
-    }
-  
-    #calender-title {
-      font-size: 1.5rem;
       justify-content: center;
     }
   
-    #prev, #next {
-      font-size: 0.9rem;
-      margin: 5px 10px;
-      width: 60px;
-      height: 25px;
-    }
-  
-    table#calender {
-      font-size: 0.8rem;
-      margin-bottom: 0;
-    }
-  
-    th, td {
-      font-size: 1rem;
-      padding: 5px;
-    }
-  
-    #calender-info h3 {
-      font-size: 1.5rem;
-    }
-  
-    #calender-info p {
-      font-size: 1rem;
-      line-height: 1.8;
-    }
-  
-    /* home4（サービス紹介）と home5（予約） */
-    #home4, #home5 {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    #service-text, #reserve-text {
-      width: 100%;
-      text-align: center;
-      padding: 0;
-    }
-  
-    #service-pic, #reserve-pic {
-      width: 100%;
-      margin: 10px 0;
-      padding: 1rem;
-    }
-  
-    #service-pic img, #reserve-pic img {
-      width: 90%;
-      margin: 0 auto;
-    }
-  
-    /* ボタン中央寄せ */
-    .button a, #reserve-container a {
-      font-size: 1.2rem;
-      padding: 8px 15px;
-    }
-  
-    /* home6（アクセス） */
-    #home6 {
-      flex-direction: column;
-      align-items: center;
-      padding: 1rem;
-    }
-  
     #access-text, #map {
       width: 100%;
-      margin: 10px 0;
-    }
-  
-    #map iframe {
-      width: 100%;
-      height: 300px;
-    }
-  
-    /* SNSリンク */
-    #sns {
-      flex-direction: column;
-      gap: 1rem;
-    }
-  
-    #instagram, #facebook {
-      width: 90%;
       margin: 0 auto;
     }
-  
-    #facebook-logo, #instagram-logo {
-      margin-right: 0.5rem;
-    }
-  
-    /* フッター */
-    footer {
-      font-size: 0.9rem;
-      height: auto;
-      padding: 10px 0;
-    }
-  
-    footer nav ul {
-      flex-direction: column;
-      padding: 0;
-    }
-  
-    footer nav li {
-      margin: 5px 0;
-      text-align: center;
-    }
-  }
-  @media (max-width: 768px) {
-    /* 全体レイアウト調整 */
-    section {
-      flex-direction: column !important;
-      padding: 1rem;
-    }
-  
-    /* ヘッダー内ロゴとナビゲーション */
-    #logo {
-      margin-left: 1rem;
-      padding-bottom: 1rem;
-      display: block;
-    }
-  
-    #nav {
-            display: none;
-    }
-  
-    #top{
-            width: 100%;
-            height: auto;
-          
-    }
-    /* カレンダーセクション */
-    #home3 {
-      flex-direction: column;
-      margin-bottom: 40px;
-      align-items: center;
-    }
-  
-    #calender-container, #calender-info {
-      width: 95%;
-      margin: 20px 0;
-    }
-  
-    #calender-title {
-      font-size: 1.5rem;
+    #access-text{
+      display: flex;
       justify-content: center;
-    }
-  
-    #prev, #next {
-      font-size: 0.9rem;
-      margin: 5px 10px;
-      width: 60px;
-      height: 25px;
-    }
-  
-    table#calender {
-      font-size: 0.8rem;
-      margin-bottom: 0;
-    }
-  
-    th, td {
-      font-size: 1rem;
-      padding: 5px;
-    }
-  
-    #calender-info h3 {
-      font-size: 1.5rem;
-    }
-  
-    #calender-info p {
-      font-size: 1rem;
-      line-height: 1.8;
-    }
-  
-    /* home4（サービス紹介）と home5（予約） */
-    #home4, #home5 {
-      flex-direction: column;
       align-items: center;
-    }
-  
-    #service-text, #reserve-text {
-      width: 100%;
       text-align: center;
-      padding: 0;
+      margin:0 auto
     }
-  
-    #service-pic, #reserve-pic {
+    #access-text h3{
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    #access-text p{
       width: 100%;
-      margin: 10px 0;
-      padding: 1rem;
+      font-size:1rem;
+      margin-bottom: 1rem;
     }
-  
-    #service-pic img, #reserve-pic img {
-      width: 90%;
+    #tel h3 a[href^="tel"]{
+      color:#cccccc;
+    }
+    #parking{
       margin: 0 auto;
     }
-  
-    /* ボタン中央寄せ */
-    .button a, #reserve-container a {
-      font-size: 1.2rem;
-      padding: 8px 15px;
-    }
-  
-    /* home6（アクセス） */
-    #home6 {
-      flex-direction: column;
-      align-items: center;
-      padding: 1rem;
-    }
-  
-    #access-text, #map {
-      width: 100%;
-      margin: 10px 0;
-    }
-  
     #map iframe {
       width: 100%;
       height: 300px;
@@ -847,34 +1000,49 @@ footer nav{
   
     /* SNSリンク */
     #sns {
+      width: 100%;
       flex-direction: column;
-      gap: 1rem;
+      gap: 1.5rem;
     }
   
-    #instagram, #facebook {
-      width: 90%;
+    .instagram, .facebook {
+      width: 10rem;
       margin: 0 auto;
+      gap:0.25rem;
     }
   
     #facebook-logo, #instagram-logo {
-      margin-right: 0.5rem;
+      text-align: left;
+    }
+    #sns p{
+      margin-top: 5%;
+      font-size: 1rem;
     }
   
     /* フッター */
     footer {
-      font-size: 0.9rem;
       height: auto;
-      padding: 10px 0;
+      padding: 1rem 0;
     }
-  
-    footer nav ul {
-      flex-direction: column;
-      padding: 0;
-    }
-  
-    footer nav li {
-      margin: 5px 0;
-      text-align: center;
-    }
-  }
-      
+    #footer-nav {
+  display: flex;
+  flex-direction: row; /* ← これで横並び */
+  gap: 4rem; /* 子要素の間隔（お好みで調整） */
+}
+
+#footer-nav1, #footer-nav2 {
+  display: flex;
+  flex-direction: column; /* リスト項目は縦に並べる */
+  gap: 0.5rem; /* 各リンクの上下の余白 */
+  margin-bottom: 2rem;
+}
+
+#footer-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+#footer-nav li a{
+  text-align: left;
+}
+}
